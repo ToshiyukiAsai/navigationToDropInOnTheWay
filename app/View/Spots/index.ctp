@@ -1,4 +1,10 @@
 <div class="spots index">
+
+<pre>
+<?php echo count($arounds); ?>
+<?php print_r($arounds); ?>
+</pre>
+
 	<h2><?php echo __('Spots'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
@@ -40,7 +46,7 @@
 			<th><?php echo $this->Paginator->sort('establishment3'); ?></th>
 			<th><?php echo $this->Paginator->sort('establishment4'); ?></th>
 			<th><?php echo $this->Paginator->sort('establishment5'); ?></th>
-			<th><?php echo $this->Paginator->sort('latlng'); ?></th>
+			<th><?php echo $this->Paginator->sort('point'); ?></th>
 			<th><?php echo $this->Paginator->sort('youtube'); ?></th>
 			<th><?php echo $this->Paginator->sort('staytime'); ?></th>
 			<th><?php echo $this->Paginator->sort('created'); ?></th>
@@ -87,7 +93,7 @@
 		<td><?php echo h($spot['Spot']['establishment3']); ?>&nbsp;</td>
 		<td><?php echo h($spot['Spot']['establishment4']); ?>&nbsp;</td>
 		<td><?php echo h($spot['Spot']['establishment5']); ?>&nbsp;</td>
-		<td><?php echo h($spot['Spot']['latlng']); ?>&nbsp;</td>
+		<td><?php echo h($spot['Spot']['point']); ?>&nbsp;</td>
 		<td><?php echo h($spot['Spot']['youtube']); ?>&nbsp;</td>
 		<td><?php echo h($spot['Spot']['staytime']); ?>&nbsp;</td>
 		<td><?php echo h($spot['Spot']['created']); ?>&nbsp;</td>

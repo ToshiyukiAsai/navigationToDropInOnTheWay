@@ -22,7 +22,14 @@ class SpotsController extends AppController {
  */
 	public function index() {
 		$this->Spot->recursive = 0;
-		$this->set('spots', $this->Paginator->paginate());
+		$arounds = $this->Spot->find('all', array(
+				'conditions' => array(
+					"MBRContains(GeomFromText('LINESTRING(141.100738 42.870932,141.539183 43.153102)'), `Spot`.`latlng`)"
+				)
+			)
+		);
+
+		$this->set(array('spots' => $this->Paginator->paginate(), 'arounds' => $arounds));
 	}
 
 /**
